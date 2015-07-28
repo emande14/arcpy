@@ -3,7 +3,7 @@
 #Author:Eddie Anderson
 #GIS671
 
-#note: per instructions, I copied desired lines from this script and pasted
+#note: I copied desired lines from this script and pasted
 #them into python window in ArcMap. I did not run the script as is from PythonWin.
 
 #import arcpy, set workspace
