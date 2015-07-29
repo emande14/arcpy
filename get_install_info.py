@@ -1,3 +1,4 @@
+# a simple script to get Arc install info from current computer
 import arcpy
 install = arcpy.GetInstallInfo()
 for key in install:
