@@ -44,7 +44,7 @@ for row in uCur:
     y2 = row[1].lastPoint.Y
     #Euclidean distance determined by Pythagorean Theorem
     euclidean = math.sqrt((x1-x2) **2 + (y1-y2) **2)
-    #Error Handling: the following if-else statment exists to handle polyline
+    #Error Handling: the following if-else statement exists to handle polyline
     #geometries that are closed loops, i.e. their starting and ending points
     #are the same. If this is the case, their sinuosity index is 0.
     if euclidean == 0 or length == 0:
