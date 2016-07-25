@@ -1,6 +1,3 @@
-Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win32
-Type "copyright", "credits" or "license()" for more information.
->>> 
 # Dynamic labeling within ArcMap
 # created by Eddie Anderson 5/2016
 # This code (minus the comments) is meant to be run in the Label Expression window in ArcMap.
@@ -13,8 +10,7 @@ Type "copyright", "credits" or "license()" for more information.
 def FindLabel ( [DNRTRNXNUM] , [T_PNAMES] , [T_EXPDATE], [SL_EMate_2]  ):
 
 # There could be multiple materials listed for each lease on school trust lands (the "SL_EMate_2"
-# column/field). Since, we want to show only primary materials, we need to include the following
-# lines:
+# column/field). Since, we want to show only primary materials, we need to include the following lines.
 
 # "a" variable is declared and given the values of the SL_EMate_2 field
   a = [SL_EMate_2]
@@ -28,7 +24,7 @@ def FindLabel ( [DNRTRNXNUM] , [T_PNAMES] , [T_EXPDATE], [SL_EMate_2]  ):
 # material listed within a cell on the "SL_EMate_2" column, do the following.  
   for x in b:
 	  
-# We’re only concerned with primary materials, so when a material is identified as primary,
+# We're only concerned with primary materials, so when a material is identified as primary,
 # it goes to the next line. If a material is not primary, then it is skipped.	  
     if "Primary" in x:
 	    
@@ -41,7 +37,7 @@ def FindLabel ( [DNRTRNXNUM] , [T_PNAMES] , [T_EXPDATE], [SL_EMate_2]  ):
 # a variable is declared, called "leaseename". This statement deals with the T_PNAMES column/field.
 # Some names (for example, the "&" character, which could confuse ArcMap into thinking it is code
 # and not text. So, this "replace" method replaces "&" with "&amp", which ArcMap recognizes as the
-# text character "&" and not code. It’s somewhat counterintuitive: we need code to tell ArcMap that
+# text character "&" and not code. It's somewhat counterintuitive: we need code to tell ArcMap that
 # "&" really is "&" and not code.    
   leaseename = [T_PNAMES].replace("&","&amp;")
 
